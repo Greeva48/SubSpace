@@ -12,7 +12,7 @@ Installation and Setup:
 
 #Backend Setup
 Clone the Repository
-git clone https://github.com/your-username/fintech-platform.git
+git clone https://github.com/Greeva48/SubSpace.git
 
 #Navigate to Backend Directory
 cd fintech-platform/backend
