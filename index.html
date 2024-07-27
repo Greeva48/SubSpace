@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fintech Platform</h1>
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">Transactions</a>
+                <a href="#">Account</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Dashboard</h2>
+            <div class="balance">
+                <p>Current Balance</p>
+                <h3 id="current-balance">$0.00</h3>
+            </div>
+            <button id="new-transaction-btn">New Transaction</button>
+
+            <h2>Recent Transactions</h2>
+            <div class="transactions">
+                <ul id="transaction-list">
+                    <!-- Transactions will be dynamically added here -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="transaction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>New Transaction</h2>
+            <form id="transaction-form">
+                <label for="transaction-amount">Amount</label>
+                <input type="number" id="transaction-amount" name="amount" required>
+
+                <label for="transaction-type">Type</label>
+                <select id="transaction-type" name="type" required>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                </select>
+
+                <label for="transaction-name">Cardholder Name</label>
+                <input type="text" id="transaction-name" name="name" required>
+
+                <label for="transaction-card-number">Card Number</label>
+                <input type="text" id="transaction-card-number" name="card-number" required>
+
+                <label for="transaction-expiry-date">Expiry Date</label>
+                <input type="month" id="transaction-expiry-date" name="expiry-date" required>
+
+                <label for="transaction-cvv">CVV</label>
+                <input type="text" id="transaction-cvv" name="cvv" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
